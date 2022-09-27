@@ -1,14 +1,15 @@
-import Title from '@/components/Title';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
-export default function Home() {
-  return (
-    <main>
-      <Title>Hello TypeScript!</Title>
-      <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
-      <p>
-        Follow me on Twitter (
-        <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
-      </p>
-    </main>
-  );
-}
+const IndexPage = () => (
+  <Layout>
+    <Seo title="Technika Grzewcza" />
+    <div>
+      <h1>
+        Welcome to <b>Gatsby!</b>
+      </h1>
+    </div>
+  </Layout>
+);
+
+export default IndexPage;
