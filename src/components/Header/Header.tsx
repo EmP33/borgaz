@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { Wrapper } from './Header.styles';
 import useMediaQuery from '../../hooks/useMediaQuery';
@@ -12,19 +12,13 @@ import { ImLocation2 } from 'react-icons/im';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose, AiOutlinePlus } from 'react-icons/ai';
 
-interface Props {
-  siteTitle: string;
-}
-
-const Header: React.FC<Props> = ({ siteTitle }) => {
-  const matches = useMediaQuery('(max-width: 900px)');
+const Header = () => {
+  const matches = useMediaQuery(`(max-width: 900px)`);
   const [showMenu, setShowMenu] = useState(false);
   const [showDetails, setShowDetails] = useState<{
     show: boolean;
     number: number | null;
   }>({ show: false, number: null });
-
-  console.log(matches);
 
   const handleShowMenu = () => {
     setShowMenu((prev) => !prev);
@@ -41,7 +35,9 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
     }
   };
 
-  console.log(showDetails);
+  useEffect(() => {
+    if (!matches) setShowDetails((prev) => ({ show: false, number: null }));
+  }, [matches]);
 
   return (
     <Wrapper showMenu={showMenu}>
@@ -146,4 +142,4 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

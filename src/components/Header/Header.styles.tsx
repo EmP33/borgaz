@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Wrapper = styled.header<{ showMenu: boolean }>`
   width: 100%;
@@ -57,10 +57,12 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
       list-style: none;
       flex-grow: 1;
       justify-content: center;
-      column-gap: 3rem;
+      column-gap: 2rem;
+      z-index: 99;
+      padding: 2rem 0;
 
       @media screen and (max-width: 1200px) {
-        column-gap: 1rem;
+        column-gap: 0.7rem;
       }
       @media screen and (max-width: 900px) {
         margin-top: 1rem;
@@ -72,14 +74,16 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
         background-color: #fff;
         bottom: 0;
         transform: ${({ showMenu }) =>
-          showMenu ? "translateY(100%)" : "translateY(-200%)"};
-        opacity: ${({ showMenu }) => (showMenu ? "1" : "0")};
+          showMenu ? 'translateY(100%)' : 'translateY(-200%)'};
+        opacity: ${({ showMenu }) => (showMenu ? '1' : '0')};
         transition-property: transform, opacity;
         transition-duration: 0.2s, 0.1s;
         transition-timing-function: ease-in;
       }
 
       li {
+        padding: 0.5rem 0;
+
         &:hover .dropdown-content {
           display: block;
         }
@@ -96,6 +100,7 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
 
           @media screen and (max-width: 1200px) {
             font-size: 1rem;
+            padding: 0.3rem;
           }
 
           @media screen and (max-width: 900px) {
@@ -123,7 +128,7 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
           background-color: #f1f1f1;
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          z-index: 1;
+          z-index: 3;
 
           @media screen and (max-width: 900px) {
             transition: all 0s;
@@ -164,4 +169,4 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
       }
     }
   }
-`
+`;
