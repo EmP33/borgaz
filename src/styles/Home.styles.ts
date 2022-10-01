@@ -13,6 +13,7 @@ export const HeroSection = styled.section`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, max-content);
     margin-top: 1rem;
+    min-height: 70vh;
   }
 
   &::after {

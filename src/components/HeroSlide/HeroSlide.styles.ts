@@ -28,6 +28,7 @@ export const ImageWrapper = styled.div`
       width: 50%;
       background: linear-gradient(90deg, #fff 0%, transparent 100%);
     }
+
     @media screen and (max-width: 600px) {
       width: 100%;
       background: rgba(255, 255, 255, 0.15);
