@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeroSlide /> should render properly 1`] = `
+[
+  <div
+    className="sc-gsnTZi kxqsKk"
+  >
+    <p>
+      Instalacje gazowe najnowszej generacji!
+    </p>
+    <h1>
+      STAG Q-generation
+    </h1>
+    <button
+      className="sc-dkzDqf ctKlxy"
+    >
+      Czytaj więcej
+    </button>
+  </div>,
+  <div
+    className="sc-bczRLJ floyyb"
+  />,
+]
+`;

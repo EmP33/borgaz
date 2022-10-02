@@ -1,7 +1,9 @@
 import { PrimaryButton } from '@/styles/Buttons.styles';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
 import { Wrapper } from './Footer.styles';
+
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { ImLocation } from 'react-icons/im';
 
 const Footer = () => {
   return (
@@ -14,10 +16,16 @@ const Footer = () => {
       />
       <div className="info-blocks">
         <div className="info-blocks__block">
-          <h2>Zadzwoń do nas</h2>
-          <h3>87 621 08 76</h3>
-          <h2>Jesteśmy tutaj</h2>
-          <h3>Gdańska 40C, 19-300 Ełk</h3>
+          <div>
+            <BsFillTelephoneFill />
+            <h2>Zadzwoń do nas</h2>
+            <h3>87 621 08 76</h3>
+          </div>
+          <div>
+            <ImLocation />
+            <h2>Jesteśmy tutaj</h2>
+            <h3>Gdańska 40C, 19-300 Ełk</h3>
+          </div>
         </div>
         <div className="info-blocks__block">
           <h2>Godziny otwarcia</h2>
@@ -26,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="info-blocks__block">
           <h2>Potrzebujesz pomocy? Możesz też napisać tutaj</h2>
-          <PrimaryButton>Wiadomość</PrimaryButton>
+          <PrimaryButton filled>Wiadomość</PrimaryButton>
         </div>
       </div>
       <p>Copyright &copy; 2022 BORGAZ by Emp33. Wszystkie prawa zastrzeżone.</p>

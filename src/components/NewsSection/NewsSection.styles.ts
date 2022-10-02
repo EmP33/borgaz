@@ -9,8 +9,12 @@ export const Wrapper = styled.section`
   background-repeat: no-repeat;
   background-position: bottom right;
 
+  @media screen and (max-width: 900px) {
+    background: none;
+  }
+
   .news-wrapper {
-    width: 60%;
+    width: 65%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
@@ -37,7 +41,7 @@ export const Wrapper = styled.section`
 
       @media screen and (max-width: 450px) {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 100px);
       }
 
       &:nth-of-type(1) .img-wrapper {
@@ -48,6 +52,11 @@ export const Wrapper = styled.section`
         &:nth-of-type(2) {
           grid-column: 1/3;
           grid-row: 4/5;
+
+          @media screen and (max-width: 450px) {
+            grid-column: 1/3;
+            grid-row: 3/4;
+          }
         }
       }
     }
@@ -55,19 +64,32 @@ export const Wrapper = styled.section`
     &:nth-last-of-type(1) {
       & .images {
         position: relative;
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(5, 100px);
 
         @media screen and (max-width: 900px) {
           grid-row: 1/2;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(5, 1fr);
         }
 
         & .img-wrapper {
           &:nth-of-type(1) {
-            grid-column: 1/4;
+            grid-column: 1/5;
             grid-row: 2/5;
+
+            @media screen and (max-width: 900px) {
+              grid-column: 1/4;
+              grid-row: 2/5;
+            }
           }
           &:nth-of-type(2) {
-            grid-column: 3/5;
+            grid-column: 4/6;
             grid-row: 1/3;
+
+            @media screen and (max-width: 900px) {
+              grid-column: 3/5;
+            }
           }
         }
       }
@@ -78,6 +100,7 @@ export const Wrapper = styled.section`
       align-content: center;
       justify-items: start;
       row-gap: 2rem;
+      width: 100%;
 
       & ul {
         list-style: none;

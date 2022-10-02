@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
       <ServicesSection />
       <NewsSection />
       <IntroSection />
-      {/* <Footer /> */}
+      <Footer />
     </Layout>
   );
 };

@@ -7,7 +7,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 interface Props {
   slide: ISlide;
-  image: IGatsbyImageData;
+  image: IGatsbyImageData | null;
 }
 
 const HeroSlide: React.FC<Props> = ({ slide, image }) => {
@@ -19,7 +19,11 @@ const HeroSlide: React.FC<Props> = ({ slide, image }) => {
         <PrimaryButton>Czytaj więcej</PrimaryButton>
       </ContentWrapper>
       <ImageWrapper>
-        <GatsbyImage image={getImage(image)} alt="basic alt" layout="fluid" />
+        {image !== undefined ? (
+          <GatsbyImage image={getImage(image)} alt="basic alt" />
+        ) : (
+          ``
+        )}
       </ImageWrapper>
     </>
   );
