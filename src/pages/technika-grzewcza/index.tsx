@@ -44,19 +44,17 @@ const TechnikaGrzewcza = () => {
               <div className="icon-wrapper">
                 <CgSmartHomeBoiler />
               </div>
-              <h3>Kotły Gazowe</h3>
-              <p>
-                W kotłach kondensacyjnych następuje kondensacja zawartej w
-                spalinach pary wodnej (powstałej w wyniku spalania gazu), a
-                odzyskana dzięki temu dodatkowa energia zostaje przekazana do
-                instalacji c.o.
-              </p>
+              <h3>
+                <a href="#">Kotły Gazowe</a>
+              </h3>
             </li>
             <li>
               <div className="icon-wrapper">
                 <GiSunRadiations />
               </div>
-              <h3>Pompy ciepła, kolektory słoneczne</h3>
+              <h3>
+                <a href="#">Pompy ciepła, kolektory słoneczne</a>
+              </h3>
             </li>
             <li>
               <div className="icon-wrapper">
@@ -75,12 +73,6 @@ const TechnikaGrzewcza = () => {
                 <GiFuelTank />
               </div>
               <h3>Zbiorniki przemysłowe</h3>
-              <p>
-                Nasze instalacje mają zastosowanie wszędzie tam, gdzie wymagana
-                jest bezawaryjna praca urządzeń, wysoka jakość i szybka dostawa
-                gazu jak również tam gdzie liczy się ekonomiczna strona pracy
-                instalacji.
-              </p>
             </li>
             <li>
               <div className="icon-wrapper">

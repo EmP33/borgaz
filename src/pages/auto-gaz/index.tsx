@@ -32,7 +32,7 @@ const AutoGaz = () => {
         </div>
         <StaticImage
           alt="technika grzewcza"
-          src="../../images/slides/slide2.jpg"
+          src="../../images/slides/slide1.jpg"
         />
         <div className="services">
           <ul>

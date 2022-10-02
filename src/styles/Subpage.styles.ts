@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   width: 85%;
+  min-height: 50vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 350px 1fr;
@@ -45,6 +46,7 @@ export const Wrapper = styled.section`
     & h2 {
       font-size: 2.2rem;
       padding-bottom: 0.5rem;
+      color: var(--color-primary);
     }
     & p {
       font-size: 1.2rem;
@@ -65,6 +67,8 @@ export const Wrapper = styled.section`
 
   .services {
     padding: 5rem 0;
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width: 500px) {
       padding: 2.5rem 0;
@@ -85,12 +89,23 @@ export const Wrapper = styled.section`
         align-items: center;
         position: relative;
         padding-left: 6.4rem;
+        cursor: pointer;
 
         @media screen and (max-width: 1200px) {
           padding-left: 3rem;
         }
         @media screen and (max-width: 500px) {
           padding: 0 1rem;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--color-primary);
+        }
+
+        & a {
+          text-decoration: none;
+          color: #000;
         }
 
         & .icon-wrapper {
