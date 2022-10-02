@@ -5,8 +5,14 @@ module.exports = {
     author: `Emp33`,
   },
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
-  // don't need to define it here (just if you need to change the options)
+  // don`t need to define it here (just if you need to change the options)
   plugins: [
+    {
+      resolve: `gatsby-plugin-react-leaflet`,
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
