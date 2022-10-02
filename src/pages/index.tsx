@@ -10,6 +10,7 @@ import IntroSection from '@/components/IntroSection/IntroSection';
 import ServicesSection from '@/components/ServicesSection/ServicesSection';
 import NewsSection from '@/components/NewsSection/NewsSection';
 import Footer from '@/components/Footer/Footer';
+import AboutSection from '@/components/AboutSection/AboutSection';
 
 export interface ISlide {
   heading: string;
@@ -24,21 +25,21 @@ const slides: ISlide[] = [
     heading: `STAG Q-generation`,
     subheading: `Instalacje gazowe najnowszej generacji!`,
     link: `/instalacje-gazowe`,
-    image: 1,
+    image: 0,
   },
   {
     id: 1,
     heading: `Instalacje Centralnego Ogrzewania`,
     subheading: `Kompleksowe wykonanie od projektu aż po montaż`,
     link: `/instalacje-centralnego-ogrzewania`,
-    image: 2,
+    image: 1,
   },
   {
     id: 2,
     heading: `Kotły gazowe`,
     subheading: `Szeroka oferta. Autoryzowany sklep instalacyjny`,
     link: `/kotly-gazowe`,
-    image: 0,
+    image: 2,
   },
 ];
 
@@ -60,14 +61,13 @@ const IndexPage = ({ data }) => {
         <HeroSlide
           key={slides[slide].id}
           slide={slides[slide]}
-          image={
-            data.allImageSharp.edges[slides[slide].image].next.gatsbyImageData
-          }
+          image={data.allFile.edges[slides[slide].image].node.childImageSharp}
         />
       </HeroSection>
       <ServicesSection />
       <NewsSection />
       <IntroSection />
+      <AboutSection />
       <Footer />
     </Layout>
   );
@@ -75,10 +75,12 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
-    allImageSharp {
+    allFile(filter: { name: { in: ["slide1", "slide2", "slide3"] } }) {
       edges {
-        next {
-          gatsbyImageData(width: 750, height: 700)
+        node {
+          childImageSharp {
+            gatsbyImageData(width: 750, height: 700)
+          }
         }
       }
     }

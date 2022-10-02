@@ -20,7 +20,10 @@ const IntroSection = () => {
           </p>
           <PrimaryButton light>Sprawdź teraz</PrimaryButton>
         </div>
-        <StaticImage src="../../images/technika.jpg" alt="technika grzewcza" />
+        <StaticImage
+          src="../../images/slides/slide3.jpg"
+          alt="technika grzewcza"
+        />
       </div>
       <div className="content-wrapper">
         <div>

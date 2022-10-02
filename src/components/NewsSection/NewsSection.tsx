@@ -16,18 +16,17 @@ const NewsSection = () => {
         </div>
         <div className="content">
           <h2>GENUS ONE | ALTEAS ONE NET</h2>
-          <p>
-            <ul>
-              <li>
-                GENUS ONE - Kocioł kondensacyjny dwufunkcyjny z możliwością
-                zdalnego sterowania
-              </li>
-              <li>
-                ALTEAS ONE NET - Kocioł kondensacyjny dwufunkcyjny, hi-tech
-                design, zintegrowane zdalne sterowanie
-              </li>
-            </ul>
-          </p>
+
+          <ul>
+            <li>
+              GENUS ONE - Kocioł kondensacyjny dwufunkcyjny z możliwością
+              zdalnego sterowania
+            </li>
+            <li>
+              ALTEAS ONE NET - Kocioł kondensacyjny dwufunkcyjny, hi-tech
+              design, zintegrowane zdalne sterowanie
+            </li>
+          </ul>
           <PrimaryButton>Sprawdź</PrimaryButton>
         </div>
       </div>

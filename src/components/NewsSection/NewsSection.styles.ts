@@ -104,6 +104,7 @@ export const Wrapper = styled.section`
 
       & ul {
         list-style: none;
+        color: #666;
       }
 
       & h2 {
