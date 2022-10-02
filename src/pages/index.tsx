@@ -9,7 +9,6 @@ import HeroSlide from '@/components/HeroSlide/HeroSlide';
 import IntroSection from '@/components/IntroSection/IntroSection';
 import ServicesSection from '@/components/ServicesSection/ServicesSection';
 import NewsSection from '@/components/NewsSection/NewsSection';
-import Footer from '@/components/Footer/Footer';
 import AboutSection from '@/components/AboutSection/AboutSection';
 
 export interface ISlide {
@@ -32,14 +31,14 @@ const slides: ISlide[] = [
     heading: `Instalacje Centralnego Ogrzewania`,
     subheading: `Kompleksowe wykonanie od projektu aż po montaż`,
     link: `/instalacje-centralnego-ogrzewania`,
-    image: 1,
+    image: 2,
   },
   {
     id: 2,
     heading: `Kotły gazowe`,
     subheading: `Szeroka oferta. Autoryzowany sklep instalacyjny`,
     link: `/kotly-gazowe`,
-    image: 2,
+    image: 1,
   },
 ];
 
@@ -68,7 +67,6 @@ const IndexPage = ({ data }) => {
       <NewsSection />
       <IntroSection />
       <AboutSection />
-      <Footer />
     </Layout>
   );
 };
@@ -87,6 +85,8 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Technika Grzewcza" />;
+export const Head = () => (
+  <Seo title="Technika Grzewcza | Instalacje Gazowe | Auto Serwis" />
+);
 
 export default IndexPage;

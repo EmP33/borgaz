@@ -64,11 +64,11 @@ const Header = () => {
         <GiHamburgerMenu onClick={handleShowMenu} />
         <ul>
           <li>
-            <a href="#">START</a>
+            <a href="/">START</a>
           </li>
           <li>
             <a
-              href="#"
+              href="/technika-grzewcza"
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 1);
               }}
@@ -82,17 +82,17 @@ const Header = () => {
                   : 'dropdown-content'
               }
             >
-              <a href="#">Kotły Gazowe</a>
-              <a href="#">Pompy Ciepła, kolektory słoneczne</a>
-              <a href="#">Instalacje Centralnego Ogrzewania</a>
-              <a href="#">Zbiorniki przydomowe</a>
-              <a href="#">Zbiorniki przemysłowe</a>
-              <a href="#">Kotłownie olejowe i gazowe</a>
+              <a href="/technika-grzewcza">Kotły Gazowe</a>
+              <a href="/technika-grzewcza">Pompy Ciepła, kolektory słoneczne</a>
+              <a href="/technika-grzewcza">Instalacje Centralnego Ogrzewania</a>
+              <a href="/technika-grzewcza">Zbiorniki przydomowe</a>
+              <a href="/technika-grzewcza">Zbiorniki przemysłowe</a>
+              <a href="/technika-grzewcza">Kotłownie olejowe i gazowe</a>
             </div>
           </li>
           <li>
             <a
-              href="#"
+              href="/auto-gaz"
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 2);
               }}
@@ -106,14 +106,14 @@ const Header = () => {
                   : 'dropdown-content'
               }
             >
-              <a href="#">Instalacje gazowe</a>
-              <a href="#">Cennik instalacji</a>
-              <a href="#">Przedłuż gwarancje</a>
+              <a href="/auto-gaz">Instalacje gazowe</a>
+              <a href="/auto-gaz">Cennik instalacji</a>
+              <a href="/auto-gaz">Przedłuż gwarancje</a>
             </div>
           </li>
           <li>
             <a
-              href="#"
+              href="/auto-serwis"
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 3);
               }}
@@ -127,14 +127,14 @@ const Header = () => {
                   : 'dropdown-content'
               }
             >
-              <a href="#">Aktualności i promocje</a>
+              <a href="/auto-serwis">Aktualności i promocje</a>
             </div>
           </li>
           <li>
-            <a href="#">PROMOCJE</a>
+            <a href="/promocje">PROMOCJE</a>
           </li>
           <li>
-            <a href="#">KONTAKT</a>
+            <a href="/kontakt">KONTAKT</a>
           </li>
         </ul>
       </nav>

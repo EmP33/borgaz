@@ -59,7 +59,6 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
       justify-content: center;
       column-gap: 2rem;
       z-index: 99;
-      padding: 2rem 0;
 
       @media screen and (max-width: 1200px) {
         column-gap: 0.7rem;
@@ -79,6 +78,7 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
         transition-property: transform, opacity;
         transition-duration: 0.2s, 0.1s;
         transition-timing-function: ease-in;
+        padding: 2rem 0;
       }
 
       li {
