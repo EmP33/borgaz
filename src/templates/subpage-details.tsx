@@ -23,7 +23,6 @@ interface IProps {
 const ProjectDetails: React.FC<IProps> = ({ data }) => {
   const { title, type } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
-  console.log(data);
   return (
     <Layout>
       <Wrapper data-aos="fade-up">

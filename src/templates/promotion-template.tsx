@@ -24,10 +24,9 @@ interface IProps {
 const ProjectDetails: React.FC<IProps> = ({ data }) => {
   const { title, image } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
-  console.log(data);
   return (
     <Layout>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div className="heading">
           <h2>{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: html }}></div>

@@ -11,9 +11,13 @@ const Promocje = () => {
   return (
     <Layout>
       <Wrapper>
-        <h2>Aktualne Promocje</h2>
+        <h2 data-aos="fade-up">Aktualne Promocje</h2>
         <div className="promotions">
-          <div className="promotion-block">
+          <div
+            className="promotion-block"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="img-wrapper">
               <StaticImage
                 src="../../images/GENUS-ONE.png"
@@ -29,7 +33,11 @@ const Promocje = () => {
               <PrimaryButton filled>Czytaj więcej</PrimaryButton>
             </Link>
           </div>
-          <div className="promotion-block">
+          <div
+            className="promotion-block"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="img-wrapper">
               <StaticImage
                 src="../../images/ALTEAS_ONE.png"
@@ -45,7 +53,11 @@ const Promocje = () => {
               <PrimaryButton filled>Czytaj więcej</PrimaryButton>
             </Link>
           </div>
-          <div className="promotion-block">
+          <div
+            className="promotion-block"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className="img-wrapper">
               <StaticImage
                 src="../../images/clas-one.png"
