@@ -13,7 +13,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose, AiOutlinePlus } from 'react-icons/ai';
 
 const Header = () => {
-  const { pathname } = window.location;
+  const pathname =
+    typeof window !== `undefined` ? window.location.pathname : ``;
   const matches = useMediaQuery(`(max-width: 900px)`);
   const [showMenu, setShowMenu] = useState(false);
   const [showDetails, setShowDetails] = useState<{

@@ -33,14 +33,14 @@ export const Wrapper = styled.div`
         padding: 0 1rem;
       }
 
-      &:hover {
-        text-decoration: underline;
-        color: var(--color-primary);
-      }
-
       & a {
         text-decoration: none;
         color: #000;
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--color-primary);
+        }
       }
 
       & .icon-wrapper {

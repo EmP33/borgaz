@@ -18,6 +18,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const subpageTemplate = path.resolve(`src/templates/subpage-details.tsx`);
+  const promotionTemplate = path.resolve(
+    `src/templates/promotion-template.tsx`,
+  );
   const { data } = await graphql(`
     query MyQuery {
       allMarkdownRemark {
@@ -36,10 +39,19 @@ exports.createPages = async ({ graphql, actions }) => {
   data.allMarkdownRemark.edges.forEach((edge) => {
     const slug = edge.node.frontmatter.slug;
     const type = edge.node.frontmatter.type;
-    createPage({
-      path: `/${type}/${slug}`,
-      component: subpageTemplate,
-      context: { slug: slug },
-    });
+
+    if (type === `promocje`) {
+      createPage({
+        path: `/${type}/${slug}`,
+        component: promotionTemplate,
+        context: { slug: slug },
+      });
+    } else {
+      createPage({
+        path: `/${type}/${slug}`,
+        component: subpageTemplate,
+        context: { slug: slug },
+      });
+    }
   });
 };

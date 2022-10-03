@@ -38,22 +38,26 @@ const Kontakt = () => {
           </div>
         </div>
         <div className="map">
-          <MapContainer
-            center={[53.8303145, 22.3540491]}
-            zoom={15}
-            scrollWheelZoom={false}
-          >
-            <TileLayer
-              attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-              url="https://api.mapbox.com/styles/v1/endipl/cl8rd27qr001515lgw1u9sqrl/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZW5kaXBsIiwiYSI6ImNrdjIybmF3MjA2OWIyd29icTh1dmZqMzkifQ.uMlZ7XyN41K4fy_qfMaktA"
-            />
+          {typeof window !== `undefined` ? (
+            <MapContainer
+              center={[53.8303145, 22.3540491]}
+              zoom={15}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+                url="https://api.mapbox.com/styles/v1/endipl/cl8rd27qr001515lgw1u9sqrl/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZW5kaXBsIiwiYSI6ImNrdjIybmF3MjA2OWIyd29icTh1dmZqMzkifQ.uMlZ7XyN41K4fy_qfMaktA"
+              />
 
-            <Marker position={[53.8303145, 22.3540491]}>
-              <Popup>
-                Gdańska 40C <br /> Gdańska 40C, 19-300 Ełk
-              </Popup>
-            </Marker>
-          </MapContainer>
+              <Marker position={[53.8303145, 22.3540491]}>
+                <Popup>
+                  Gdańska 40C <br /> Gdańska 40C, 19-300 Ełk
+                </Popup>
+              </Marker>
+            </MapContainer>
+          ) : (
+            ''
+          )}
         </div>
         <div className="contact-form">
           <h3>Wyślij wiadomość</h3>
