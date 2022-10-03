@@ -155,9 +155,9 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
   }
 `;
 
-export const HeaderLink = styled(Link)<{ active?: boolean }>`
-  color: ${({ active }) =>
-    active ? `var(--color-secondary)` : `var(--color-primary)`};
+export const HeaderLink = styled(Link)<{ activated?: boolean }>`
+  color: ${({ activated }) =>
+    activated ? `var(--color-secondary)` : `var(--color-primary)`};
   text-decoration: none;
   display: flex;
   align-items: center;

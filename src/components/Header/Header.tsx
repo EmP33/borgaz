@@ -66,13 +66,13 @@ const Header = () => {
         <GiHamburgerMenu onClick={handleShowMenu} />
         <ul>
           <li>
-            <HeaderLink active={pathname === `/`} to="/">
+            <HeaderLink activated={pathname === `/`} to="/">
               START
             </HeaderLink>
           </li>
           <li>
             <HeaderLink
-              active={pathname.includes(`technika-grzewcza`)}
+              activated={pathname.includes(`technika-grzewcza`)}
               to="/technika-grzewcza"
             >
               TECHNIKA GRZEWCZA
@@ -85,7 +85,7 @@ const Header = () => {
             <div
               className={
                 showDetails.number === 1 && showDetails.show
-                  ? `dropdown-content-active`
+                  ? `dropdown-content-activated`
                   : `dropdown-content`
               }
             >
@@ -110,7 +110,10 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <HeaderLink active={pathname.includes(`auto-gaz`)} to="/auto-gaz">
+            <HeaderLink
+              activated={pathname.includes(`auto-gaz`)}
+              to="/auto-gaz"
+            >
               AUTO GAZ
             </HeaderLink>
             <AiOutlinePlus
@@ -121,7 +124,7 @@ const Header = () => {
             <div
               className={
                 showDetails.number === 2 && showDetails.show
-                  ? `dropdown-content-active`
+                  ? `dropdown-content-activated`
                   : `dropdown-content`
               }
             >
@@ -138,7 +141,7 @@ const Header = () => {
           </li>
           <li>
             <HeaderLink
-              active={pathname.includes(`auto-serwis`)}
+              activated={pathname.includes(`auto-serwis`)}
               to="/auto-serwis"
             >
               AUTO SERWIS
@@ -151,7 +154,7 @@ const Header = () => {
             <div
               className={
                 showDetails.number === 3 && showDetails.show
-                  ? `dropdown-content-active`
+                  ? `dropdown-content-activated`
                   : `dropdown-content`
               }
             >
@@ -161,12 +164,12 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <HeaderLink active={pathname === `/promocje`} to="/promocje">
+            <HeaderLink activated={pathname === `/promocje`} to="/promocje">
               PROMOCJE
             </HeaderLink>
           </li>
           <li>
-            <HeaderLink active={pathname === `/kontakt`} to="/kontakt">
+            <HeaderLink activated={pathname === `/kontakt`} to="/kontakt">
               KONTAKT
             </HeaderLink>
           </li>
