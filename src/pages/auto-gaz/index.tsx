@@ -11,7 +11,7 @@ import { Wrapper } from '../../styles/Subpage.styles';
 const AutoGaz = () => {
   return (
     <Layout>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div className="heading">
           <h2>Auto Gaz</h2>
           <p>

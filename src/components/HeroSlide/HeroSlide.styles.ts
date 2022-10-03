@@ -4,6 +4,7 @@ export const ImageWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  opacity: 0;
 
   @media screen and (max-width: 600px) {
     grid-row: 1/2;
@@ -40,6 +41,7 @@ export const ContentWrapper = styled.div`
   width: 75%;
   z-index: 3;
   padding: 1rem;
+  opacity: 0;
 
   @media screen and (max-width: 1200px) {
     width: 100%;

@@ -18,7 +18,7 @@ import { CgSmartHomeBoiler } from 'react-icons/cg';
 const TechnikaGrzewcza = () => {
   return (
     <Layout>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div className="heading">
           <h2>Technika Grzewcza</h2>
           <p>Wykonujemy kompleksowe prace instalacyjne</p>

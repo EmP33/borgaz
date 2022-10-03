@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1010%26quot%3b)' fill='none'%3e%3cpath d='M665.52 661.32C749.82 660.14 728.93 566.55 987.27 560.29 1245.61 554.03 1456.5 296.82 1630.76 291.49' stroke='rgba(172%2c 6%2c 6%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M308.25 586.24C491.94 564.58 602.8 155.29 908.83 154.18 1214.86 153.07 1351.49 347.72 1509.41 350.18' stroke='rgba(172%2c 6%2c 6%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M536.75 585.48C700.04 578.46 805.77 315.55 1127.19 304.79 1448.62 294.03 1559.31 79.18 1717.64 75.19' stroke='rgba(172%2c 6%2c 6%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M492.95 625.68C585.85 619.18 550.78 449.36 815.7 439.69 1080.63 430.02 1288.53 197.43 1461.21 193.29' stroke='rgba(172%2c 6%2c 6%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M573.63 668.81C743.2 639.46 823.56 223.46 1095.78 220.25 1367.99 217.04 1482.78 359.04 1617.92 360.25' stroke='rgba(172%2c 6%2c 6%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1010'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: bottom right;
+  overflow: hidden;
 
   @media screen and (max-width: 900px) {
     background: none;

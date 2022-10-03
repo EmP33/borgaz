@@ -5,7 +5,7 @@ import { Wrapper } from './NewsSection.styles';
 const NewsSection = () => {
   return (
     <Wrapper>
-      <div className="news-wrapper">
+      <div className="news-wrapper" data-aos="fade-left">
         <div className="images">
           <div className="img-wrapper">
             <StaticImage src="../../images/GENUS-ONE.png" alt="kociol" />
@@ -30,7 +30,7 @@ const NewsSection = () => {
           <PrimaryButton>Sprawdź</PrimaryButton>
         </div>
       </div>
-      <div className="news-wrapper">
+      <div className="news-wrapper" data-aos="fade-right">
         <div className="content">
           <h2>Dynamiczna wymiana oleju w skrzyniach automatycznych</h2>
           <p>

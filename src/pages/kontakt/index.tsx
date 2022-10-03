@@ -21,7 +21,7 @@ const Kontakt = () => {
 
   return (
     <Layout>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div className="content">
           <h2>Skontaktuj się z nami!</h2>
           <div>

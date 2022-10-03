@@ -8,7 +8,7 @@ import { BsSnow } from 'react-icons/bs';
 
 const IntroSection = () => {
   return (
-    <Wrapper>
+    <Wrapper data-aos="fade-up">
       <div className="content-wrapper">
         <div>
           <BsSnow />

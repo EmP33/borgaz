@@ -11,7 +11,7 @@ import { Wrapper } from '../../styles/Subpage.styles';
 const AutoSerwis = () => {
   return (
     <Layout>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div className="heading">
           <h2>Auto Serwis</h2>
           <ul>
