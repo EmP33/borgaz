@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-import { Wrapper } from './Header.styles';
+
+import { HeaderLink, Wrapper } from './Header.styles';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
 // Images
@@ -20,23 +20,27 @@ const Header = () => {
     number: number | null;
   }>({ show: false, number: null });
 
+  console.log(window.location.pathname);
+
   const handleShowMenu = () => {
     setShowMenu((prev) => !prev);
   };
 
   const handleShowDetails = (e: any, numb: number) => {
     e.stopPropagation();
+
     if (!matches) return;
-    if (e.target.localName === 'svg' || e.target.localName === 'path') {
+    console.log('show');
+    if (e.target.localName === `svg` || e.target.localName === `path`) {
       if (numb !== showDetails.number) {
-        return setShowDetails((prev) => ({ show: true, number: numb }));
+        return setShowDetails(() => ({ show: true, number: numb }));
       }
       setShowDetails((prev) => ({ show: !prev.show, number: numb }));
     }
   };
 
   useEffect(() => {
-    if (!matches) setShowDetails((prev) => ({ show: false, number: null }));
+    if (!matches) setShowDetails(() => ({ show: false, number: null }));
   }, [matches]);
 
   return (
@@ -53,88 +57,94 @@ const Header = () => {
         </div>
       </div>
       <nav className="appbar">
-        <a href="/">
+        <HeaderLink to="/">
           <StaticImage
             src="../../images/logo.png"
             alt="logo"
             placeholder="blurred"
             width={200}
           />
-        </a>
+        </HeaderLink>
         <GiHamburgerMenu onClick={handleShowMenu} />
         <ul>
           <li>
-            <a href="/">START</a>
+            <HeaderLink to="/">START</HeaderLink>
           </li>
           <li>
-            <a
-              href="/technika-grzewcza"
+            <HeaderLink to="/technika-grzewcza">TECHNIKA GRZEWCZA</HeaderLink>
+            <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 1);
               }}
-            >
-              TECHNIKA GRZEWCZA <AiOutlinePlus />
-            </a>
+            />
             <div
               className={
                 showDetails.number === 1 && showDetails.show
-                  ? 'dropdown-content-active'
-                  : 'dropdown-content'
+                  ? `dropdown-content-active`
+                  : `dropdown-content`
               }
             >
-              <a href="/technika-grzewcza">Kotły Gazowe</a>
-              <a href="/technika-grzewcza">Pompy Ciepła, kolektory słoneczne</a>
-              <a href="/technika-grzewcza">Instalacje Centralnego Ogrzewania</a>
-              <a href="/technika-grzewcza">Zbiorniki przydomowe</a>
-              <a href="/technika-grzewcza">Zbiorniki przemysłowe</a>
-              <a href="/technika-grzewcza">Kotłownie olejowe i gazowe</a>
+              <HeaderLink to="/technika-grzewcza/kotly-gazowe">
+                Kotły Gazowe
+              </HeaderLink>
+              <HeaderLink to="/technika-grzewcza">
+                Pompy Ciepła, kolektory słoneczne
+              </HeaderLink>
+              <HeaderLink to="/technika-grzewcza">
+                Instalacje Centralnego Ogrzewania
+              </HeaderLink>
+              <HeaderLink to="/technika-grzewcza">
+                Zbiorniki przydomowe
+              </HeaderLink>
+              <HeaderLink to="/technika-grzewcza">
+                Zbiorniki przemysłowe
+              </HeaderLink>
+              <HeaderLink to="/technika-grzewcza">
+                Kotłownie olejowe i gazowe
+              </HeaderLink>
             </div>
           </li>
           <li>
-            <a
-              href="/auto-gaz"
+            <HeaderLink to="/auto-gaz">AUTO GAZ</HeaderLink>
+            <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 2);
               }}
-            >
-              AUTO GAZ <AiOutlinePlus />
-            </a>
+            />
             <div
               className={
                 showDetails.number === 2 && showDetails.show
-                  ? 'dropdown-content-active'
-                  : 'dropdown-content'
+                  ? `dropdown-content-active`
+                  : `dropdown-content`
               }
             >
-              <a href="/auto-gaz">Instalacje gazowe</a>
-              <a href="/auto-gaz">Cennik instalacji</a>
-              <a href="/auto-gaz">Przedłuż gwarancje</a>
+              <HeaderLink to="/auto-gaz">Instalacje gazowe</HeaderLink>
+              <HeaderLink to="/auto-gaz">Cennik instalacji</HeaderLink>
+              <HeaderLink to="/auto-gaz">Przedłuż gwarancje</HeaderLink>
             </div>
           </li>
           <li>
-            <a
-              href="/auto-serwis"
+            <HeaderLink to="/auto-serwis">AUTO SERWIS</HeaderLink>
+            <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 3);
               }}
-            >
-              AUTO SERWIS <AiOutlinePlus />
-            </a>
+            />
             <div
               className={
                 showDetails.number === 3 && showDetails.show
-                  ? 'dropdown-content-active'
-                  : 'dropdown-content'
+                  ? `dropdown-content-active`
+                  : `dropdown-content`
               }
             >
-              <a href="/auto-serwis">Aktualności i promocje</a>
+              <HeaderLink to="/auto-serwis">Aktualności i promocje</HeaderLink>
             </div>
           </li>
           <li>
-            <a href="/promocje">PROMOCJE</a>
+            <HeaderLink to="/promocje">PROMOCJE</HeaderLink>
           </li>
           <li>
-            <a href="/kontakt">KONTAKT</a>
+            <HeaderLink to="/kontakt">KONTAKT</HeaderLink>
           </li>
         </ul>
       </nav>

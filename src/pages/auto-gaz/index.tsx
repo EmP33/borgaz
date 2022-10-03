@@ -1,15 +1,12 @@
 import { StaticImage } from 'gatsby-plugin-image';
 
 //Components
-import Layout from '@/components/layout';
-import Seo from '@/components/seo';
+import Layout from '../../components/layout';
+import Seo from '../../components/seo';
+import SubpageServices from '../../components/SubpageServices/SubpageServices';
 
 // Styles
-import { Wrapper } from '@/styles/Subpage.styles';
-// Icons
-import { GiGasPump } from 'react-icons/gi';
-import { MdOutlinePriceChange } from 'react-icons/md';
-import { AiOutlineCheck } from 'react-icons/ai';
+import { Wrapper } from '../../styles/Subpage.styles';
 
 const AutoGaz = () => {
   return (
@@ -30,32 +27,8 @@ const AutoGaz = () => {
             "przystosowany do zasilania gazem".
           </p>
         </div>
-        <StaticImage
-          alt="technika grzewcza"
-          src="../../images/slides/slide1.jpg"
-        />
-        <div className="services">
-          <ul>
-            <li>
-              <div className="icon-wrapper">
-                <GiGasPump />
-              </div>
-              <h3>Instalacje gazowe</h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <MdOutlinePriceChange />
-              </div>
-              <h3>Cennik instalacji</h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <AiOutlineCheck />
-              </div>
-              <h3>Przedłuż Gwarancję</h3>
-            </li>
-          </ul>
-        </div>
+        <StaticImage alt="stag gaz" src="../../images/slides/slide1.jpg" />
+        <SubpageServices type="auto-gaz" />
       </Wrapper>
     </Layout>
   );

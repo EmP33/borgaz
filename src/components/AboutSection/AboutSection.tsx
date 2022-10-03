@@ -1,4 +1,4 @@
-import { PrimaryButton } from '@/styles/Buttons.styles';
+import { PrimaryButton } from '../../styles/Buttons.styles';
 import React from 'react';
 import { Wrapper } from './AboutSection.styles';
 // Leaflet MAP

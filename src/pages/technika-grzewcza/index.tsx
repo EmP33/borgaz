@@ -1,10 +1,11 @@
 import React from 'react';
 // Styles
-import { Wrapper } from '@/styles/Subpage.styles';
+import { Wrapper } from '../../styles/Subpage.styles';
 // Components
-import Layout from '@/components/layout';
+import Layout from '../../components/layout';
 import { StaticImage } from 'gatsby-plugin-image';
-import Seo from '@/components/seo';
+import Seo from '../../components/seo';
+import SubpageServices from '../../components/SubpageServices/SubpageServices';
 // Icons
 import {
   GiHeatHaze,
@@ -38,50 +39,7 @@ const TechnikaGrzewcza = () => {
           alt="technika grzewcza"
           src="../../images/slides/slide2.jpg"
         />
-        <div className="services">
-          <ul>
-            <li>
-              <div className="icon-wrapper">
-                <CgSmartHomeBoiler />
-              </div>
-              <h3>
-                <a href="#">Kotły Gazowe</a>
-              </h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <GiSunRadiations />
-              </div>
-              <h3>
-                <a href="#">Pompy ciepła, kolektory słoneczne</a>
-              </h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <GiHeatHaze />
-              </div>
-              <h3>Instalacje Centralnego Ogrzewania</h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <GiOilDrum />
-              </div>
-              <h3>Zbiorniki przydomowe</h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <GiFuelTank />
-              </div>
-              <h3>Zbiorniki przemysłowe</h3>
-            </li>
-            <li>
-              <div className="icon-wrapper">
-                <CgSmartHomeBoiler />
-              </div>
-              <h3>Kotłownie olejowe i gazowe</h3>
-            </li>
-          </ul>
-        </div>
+        <SubpageServices type="technika-grzewcza" />
       </Wrapper>
     </Layout>
   );

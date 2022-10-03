@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 export const Wrapper = styled.header<{ showMenu: boolean }>`
@@ -73,8 +74,8 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
         background-color: #fff;
         bottom: 0;
         transform: ${({ showMenu }) =>
-          showMenu ? 'translateY(100%)' : 'translateY(-200%)'};
-        opacity: ${({ showMenu }) => (showMenu ? '1' : '0')};
+          showMenu ? `translateY(100%)` : `translateY(-200%)`};
+        opacity: ${({ showMenu }) => (showMenu ? `1` : `0`)};
         transition-property: transform, opacity;
         transition-duration: 0.2s, 0.1s;
         transition-timing-function: ease-in;
@@ -83,52 +84,35 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
 
       li {
         padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 900px) {
+          display: grid;
+          grid-template-columns: 200px 25px;
+          text-align: center;
+          justify-content: center;
+          justify-items: center;
+        }
 
         &:hover .dropdown-content {
           display: block;
         }
-        a {
-          color: var(--color-primary);
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          letter-spacing: 1px;
-          font-size: 1.1rem;
-          width: 100%;
-          display: block;
-          padding: 0.75rem;
-
-          @media screen and (max-width: 1200px) {
-            font-size: 1rem;
-            padding: 0.3rem;
-          }
-
-          @media screen and (max-width: 900px) {
-            width: 100%;
-          }
-
-          &:hover {
-            color: var(--color-secondary);
-          }
-          & > svg {
-            font-size: 0.9rem;
-            transition: all 0.2s linear;
-
-            @media screen and (max-width: 900px) {
-              &:hover {
-                transform: rotate(45deg);
-              }
-            }
-          }
-        }
 
         .dropdown-content {
+          grid-column: 1/-1;
+          align-self: start;
+          transform: translateY(50px);
           display: none;
           position: absolute;
           background-color: #f1f1f1;
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           z-index: 3;
+
+          @media screen and (max-width: 1200px) {
+            transform: translateY(35px);
+          }
 
           @media screen and (max-width: 900px) {
             transition: all 0s;
@@ -166,6 +150,37 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
       margin-right: 1rem;
       @media screen and (min-width: 900px) {
         display: none;
+      }
+    }
+  }
+`;
+
+export const HeaderLink = styled(Link)<{ active: boolean }>`
+  color: ${({ active }) =>
+    active ? `var(--color-secondary)` : `var(--color-primary)`};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.75rem;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  &:hover {
+    color: var(--color-secondary);
+  }
+  & > svg {
+    font-size: 0.9rem;
+    transition: all 0.2s linear;
+
+    @media screen and (max-width: 900px) {
+      &:hover {
+        transform: rotate(45deg);
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContentWrapper, ImageWrapper } from './HeroSlide.styles';
 
-import { PrimaryButton } from '@/styles/Buttons.styles';
+import { PrimaryButton } from '../../styles/Buttons.styles';
 import { ISlide } from '../../pages/index';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 

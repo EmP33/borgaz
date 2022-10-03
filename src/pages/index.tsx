@@ -5,11 +5,11 @@ import Seo from '../components/seo';
 import { HeroSection } from '../styles/Home.styles';
 
 // Components
-import HeroSlide from '@/components/HeroSlide/HeroSlide';
-import IntroSection from '@/components/IntroSection/IntroSection';
-import ServicesSection from '@/components/ServicesSection/ServicesSection';
-import NewsSection from '@/components/NewsSection/NewsSection';
-import AboutSection from '@/components/AboutSection/AboutSection';
+import HeroSlide from '../components/HeroSlide/HeroSlide';
+import IntroSection from '../components/IntroSection/IntroSection';
+import ServicesSection from '../components/ServicesSection/ServicesSection';
+import NewsSection from '../components/NewsSection/NewsSection';
+import AboutSection from '../components/AboutSection/AboutSection';
 
 export interface ISlide {
   heading: string;

@@ -1,14 +1,12 @@
 import { StaticImage } from 'gatsby-plugin-image';
 
 // Components
-import Layout from '@/components/layout';
-import Seo from '@/components/seo';
+import Layout from '../../components/layout';
+import Seo from '../../components/seo';
+import SubpageServices from '../../components/SubpageServices/SubpageServices';
 
 // Styles
-import { Wrapper } from '@/styles/Subpage.styles';
-// Icons
-
-import { AiOutlinePercentage } from 'react-icons/ai';
+import { Wrapper } from '../../styles/Subpage.styles';
 
 const AutoSerwis = () => {
   return (
@@ -26,19 +24,8 @@ const AutoSerwis = () => {
             <li>Montaż instalacji gazowych w samochodach.</li>
           </ul>
         </div>
-        <StaticImage alt="technika grzewcza" src="../../images/mechanika.jpg" />
-        <div className="services">
-          <ul>
-            <li>
-              <div className="icon-wrapper">
-                <AiOutlinePercentage />
-              </div>
-              <h3>
-                <a href="#">Aktualności i Promocje</a>
-              </h3>
-            </li>
-          </ul>
-        </div>
+        <StaticImage alt="auto serwis" src="../../images/mechanika.jpg" />
+        <SubpageServices type="auto-serwis" />
       </Wrapper>
     </Layout>
   );

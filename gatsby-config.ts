@@ -29,6 +29,14 @@ module.exports = {
         // Add any options here
       },
     },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `subpages`,
+        path: `${__dirname}/src/projects`,
+      },
+    },
   ],
   jsxRuntime: `automatic`,
 };

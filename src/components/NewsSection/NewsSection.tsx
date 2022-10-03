@@ -1,4 +1,4 @@
-import { PrimaryButton } from '@/styles/Buttons.styles';
+import { PrimaryButton } from '../../styles/Buttons.styles';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Wrapper } from './NewsSection.styles';
 
