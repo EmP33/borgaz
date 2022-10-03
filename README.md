@@ -1,7 +1,7 @@
 
-# BMW-POLSKA
+# BOR-GAZ
 
-Projekt jest w pełni responsywny oraz pokryty testami jednostkowymi.
+Projekt stworzony jako nowa wersja strony firmowej bor-gaz.
 
 https://borgaz-c86n.vercel.app/
 
