@@ -92,19 +92,19 @@ const Header = () => {
               <HeaderLink to="/technika-grzewcza/kotly-gazowe">
                 Kotły Gazowe
               </HeaderLink>
-              <HeaderLink to="/technika-grzewcza">
+              <HeaderLink to="/technika-grzewcza/pompy-ciepla-kolektory-sloneczne">
                 Pompy Ciepła, kolektory słoneczne
               </HeaderLink>
-              <HeaderLink to="/technika-grzewcza">
+              <HeaderLink to="/technika-grzewcza/instalacje-centralnego-ogrzewania">
                 Instalacje Centralnego Ogrzewania
               </HeaderLink>
-              <HeaderLink to="/technika-grzewcza">
+              <HeaderLink to="/technika-grzewcza/zbiorniki-przydomowe">
                 Zbiorniki przydomowe
               </HeaderLink>
-              <HeaderLink to="/technika-grzewcza">
+              <HeaderLink to="/technika-grzewcza/zbiorniki-przemyslowe">
                 Zbiorniki przemysłowe
               </HeaderLink>
-              <HeaderLink to="/technika-grzewcza">
+              <HeaderLink to="/technika-grzewcza/kotlownie-olejowe-i-gazowe">
                 Kotłownie olejowe i gazowe
               </HeaderLink>
             </div>
@@ -125,9 +125,15 @@ const Header = () => {
                   : `dropdown-content`
               }
             >
-              <HeaderLink to="/auto-gaz">Instalacje gazowe</HeaderLink>
-              <HeaderLink to="/auto-gaz">Cennik instalacji</HeaderLink>
-              <HeaderLink to="/auto-gaz">Przedłuż gwarancje</HeaderLink>
+              <HeaderLink to="/auto-gaz/instalacje-gazowe">
+                Instalacje gazowe
+              </HeaderLink>
+              <HeaderLink to="/auto-gaz/cennik-instalacji">
+                Cennik instalacji
+              </HeaderLink>
+              <HeaderLink to="/auto-gaz/przedluz-gwarancje">
+                Przedłuż gwarancje
+              </HeaderLink>
             </div>
           </li>
           <li>
@@ -149,7 +155,9 @@ const Header = () => {
                   : `dropdown-content`
               }
             >
-              <HeaderLink to="/auto-serwis">Aktualności i promocje</HeaderLink>
+              <HeaderLink to="/auto-serwis/aktualnosci-i-promocje">
+                Aktualności i promocje
+              </HeaderLink>
             </div>
           </li>
           <li>

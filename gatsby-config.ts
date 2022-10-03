@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `subpages`,
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/subpages`,
       },
     },
   ],

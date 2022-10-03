@@ -33,6 +33,22 @@ export const Wrapper = styled.section`
       font-size: 1.1rem;
     }
 
+    & table,
+    td,
+    th {
+      border: 1px solid #333;
+    }
+
+    & td,
+    th {
+      padding: 0.25rem;
+    }
+
+    & table {
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
     @media screen and (max-width: 900px) {
       justify-content: center;
       grid-column: 1/-1;

@@ -25,6 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             frontmatter {
               slug
+              type
             }
           }
         }
@@ -34,10 +35,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.allMarkdownRemark.edges.forEach((edge) => {
     const slug = edge.node.frontmatter.slug;
+    const type = edge.node.frontmatter.type;
     createPage({
-      path: `/technika-grzewcza/` + slug,
+      path: `/${type}/${slug}`,
       component: subpageTemplate,
-      context: { $slug: slug },
+      context: { slug: slug },
     });
   });
 };

@@ -23,6 +23,7 @@ interface IProps {
 const ProjectDetails: React.FC<IProps> = ({ data }) => {
   const { title, type } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
+  console.log(data);
   return (
     <Layout>
       <Wrapper>
@@ -30,10 +31,19 @@ const ProjectDetails: React.FC<IProps> = ({ data }) => {
           <h2>{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
-        <StaticImage
-          alt="technika grzewcza"
-          src="../images/slides/slide2.jpg"
-        />
+        {type === `technika-grzewcza` ? (
+          <StaticImage
+            alt="technika grzewcza"
+            src="../images/slides/slide2.jpg"
+          />
+        ) : type === `auto-gaz` ? (
+          <StaticImage alt="auto-gaz" src="../images/slides/slide1.jpg" />
+        ) : (
+          <StaticImage
+            alt="mechanika auto serwis"
+            src="../images/mechanika.jpg"
+          />
+        )}
         <SubpageServices type={type} />
       </Wrapper>
     </Layout>
