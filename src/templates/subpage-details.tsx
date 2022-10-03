@@ -5,11 +5,22 @@ import { StaticImage } from 'gatsby-plugin-image';
 // Styles
 import { Wrapper } from '../styles/Subpage.styles';
 // Icons
-import { AiOutlinePercentage } from 'react-icons/ai';
 import SubpageServices from '../components/SubpageServices/SubpageServices';
+import Seo from '../components/seo';
 
-const ProjectDetails = ({ data }) => {
-  console.log(data);
+interface IProps {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        title: string;
+        type: string;
+      };
+    };
+  };
+}
+
+const ProjectDetails: React.FC<IProps> = ({ data }) => {
   const { title, type } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
   return (
@@ -40,5 +51,9 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head: React.FC<IProps> = ({ data }) => (
+  <Seo title={data.markdownRemark.frontmatter.title} />
+);
 
 export default ProjectDetails;

@@ -155,7 +155,7 @@ export const Wrapper = styled.header<{ showMenu: boolean }>`
   }
 `;
 
-export const HeaderLink = styled(Link)<{ active: boolean }>`
+export const HeaderLink = styled(Link)<{ active?: boolean }>`
   color: ${({ active }) =>
     active ? `var(--color-secondary)` : `var(--color-primary)`};
   text-decoration: none;

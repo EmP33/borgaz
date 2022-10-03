@@ -13,14 +13,13 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose, AiOutlinePlus } from 'react-icons/ai';
 
 const Header = () => {
+  const { pathname } = window.location;
   const matches = useMediaQuery(`(max-width: 900px)`);
   const [showMenu, setShowMenu] = useState(false);
   const [showDetails, setShowDetails] = useState<{
     show: boolean;
     number: number | null;
   }>({ show: false, number: null });
-
-  console.log(window.location.pathname);
 
   const handleShowMenu = () => {
     setShowMenu((prev) => !prev);
@@ -30,7 +29,6 @@ const Header = () => {
     e.stopPropagation();
 
     if (!matches) return;
-    console.log('show');
     if (e.target.localName === `svg` || e.target.localName === `path`) {
       if (numb !== showDetails.number) {
         return setShowDetails(() => ({ show: true, number: numb }));
@@ -68,10 +66,17 @@ const Header = () => {
         <GiHamburgerMenu onClick={handleShowMenu} />
         <ul>
           <li>
-            <HeaderLink to="/">START</HeaderLink>
+            <HeaderLink active={pathname === `/`} to="/">
+              START
+            </HeaderLink>
           </li>
           <li>
-            <HeaderLink to="/technika-grzewcza">TECHNIKA GRZEWCZA</HeaderLink>
+            <HeaderLink
+              active={pathname.includes(`technika-grzewcza`)}
+              to="/technika-grzewcza"
+            >
+              TECHNIKA GRZEWCZA
+            </HeaderLink>
             <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 1);
@@ -105,7 +110,9 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <HeaderLink to="/auto-gaz">AUTO GAZ</HeaderLink>
+            <HeaderLink active={pathname.includes(`auto-gaz`)} to="/auto-gaz">
+              AUTO GAZ
+            </HeaderLink>
             <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 2);
@@ -124,7 +131,12 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <HeaderLink to="/auto-serwis">AUTO SERWIS</HeaderLink>
+            <HeaderLink
+              active={pathname.includes(`auto-serwis`)}
+              to="/auto-serwis"
+            >
+              AUTO SERWIS
+            </HeaderLink>
             <AiOutlinePlus
               onClick={(e: React.MouseEvent) => {
                 handleShowDetails(e, 3);
@@ -141,10 +153,14 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <HeaderLink to="/promocje">PROMOCJE</HeaderLink>
+            <HeaderLink active={pathname === `/promocje`} to="/promocje">
+              PROMOCJE
+            </HeaderLink>
           </li>
           <li>
-            <HeaderLink to="/kontakt">KONTAKT</HeaderLink>
+            <HeaderLink active={pathname === `/kontakt`} to="/kontakt">
+              KONTAKT
+            </HeaderLink>
           </li>
         </ul>
       </nav>
